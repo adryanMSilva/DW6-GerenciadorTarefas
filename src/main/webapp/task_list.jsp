@@ -342,8 +342,8 @@ input:checked+.slider:before {
 						onclick="showConfirmationModal(<%= task.getTaskId() %>)">Excluir</button>
 					<form id="deleteForm_<%= task.getTaskId() %>" action="tasks"
 						method="post" style="display: none;">
-						<input type="hidden" name="action" value="delete_task"> <input
-							type="hidden" name="taskId" value="<%= task.getTaskId() %>">
+						<input type="hidden" name="action" value="delete_task"> 
+						<input type="hidden" name="task_id" value="<%= task.getTaskId() %>">
 					</form></td>
 			</tr>
 			<%
