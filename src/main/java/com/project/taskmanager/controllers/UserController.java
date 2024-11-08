@@ -27,6 +27,7 @@ public class UserController extends HttpServlet {
 			
 			try {
 				userDTO.save(u);
+				request.getRequestDispatcher("login.jsp").forward(request, response);
 			} catch (DBException e) {
 				String errorMessage = "";
 				if(e.getMessage().contains("Duplicate entry")) {
